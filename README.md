@@ -16,7 +16,7 @@ Resize uses a **3x3 grid** — where you click in the window determines which ed
 ┌───────────┬───────────┬────────────┐
 │  top-left │    top    │ top-right	 │
 ├───────────┼───────────┼────────────┤
-│   left    │  (bottom- │   right		 │
+│   left    │  (bottom- │   right    │
 │           │   right)  │            │
 ├───────────┼───────────┼────────────┤
 │bottom-left│  bottom   │bottom-right│
