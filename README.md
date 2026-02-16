@@ -13,14 +13,14 @@ A macOS menu bar utility that brings X11-style window management to macOS — ho
 Resize uses a **3x3 grid** — where you click in the window determines which edges move:
 
 ```
-┌───────────┬───────────┬───────────┐
-│  top-left │    top    │ top-right │
-├───────────┼───────────┼───────────┤
-│   left    │  (bottom- │   right   │
-│           │   right)  │           │
-├───────────┼───────────┼───────────┤
+┌───────────┬───────────┬────────────┐
+│  top-left │    top    │ top-right	 │
+├───────────┼───────────┼────────────┤
+│   left    │  (bottom- │   right		 │
+│           │   right)  │            │
+├───────────┼───────────┼────────────┤
 │bottom-left│  bottom   │bottom-right│
-└───────────┴───────────┴───────────┘
+└───────────┴───────────┴────────────┘
 ```
 
 The default modifier key is **Option** (⌥). Change it via the menu bar icon to Control or Command.
@@ -57,6 +57,10 @@ Click the menu bar icon (↔) to:
 ## How It Works
 
 Holdfast uses a CGEvent tap to intercept mouse events at the session level. When the modifier key is held, left-click events are consumed (preventing them from reaching the target app) and routed through a state machine that applies move/resize operations via the macOS Accessibility API (AXUIElement).
+
+## Inspiration
+
+Inspired by X11 style window management. RIP the Hyperdock app that had this feature buried in settings. 
 
 ## License
 
