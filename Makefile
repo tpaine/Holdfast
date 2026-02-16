@@ -25,6 +25,7 @@ run: build
 	open $(APP_BUNDLE)
 
 install: build
+	rm -rf $(INSTALL_DIR)/$(APP_NAME).app
 	cp -R $(APP_BUNDLE) $(INSTALL_DIR)/$(APP_NAME).app
 	@echo "Installed to $(INSTALL_DIR)/$(APP_NAME).app"
 
