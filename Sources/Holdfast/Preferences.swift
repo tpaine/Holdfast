@@ -2,8 +2,8 @@ import AppKit
 import Carbon.HIToolbox
 
 enum ModifierKey: Int, CaseIterable {
-    case control = 0
-    case option = 1
+    case option = 0
+    case control = 1
     case command = 2
 
     var label: String {
@@ -30,7 +30,7 @@ class Preferences {
     var modifierKey: ModifierKey {
         get {
             let raw = defaults.integer(forKey: modifierKeyKey)
-            return ModifierKey(rawValue: raw) ?? .control
+            return ModifierKey(rawValue: raw) ?? .option
         }
         set {
             defaults.set(newValue.rawValue, forKey: modifierKeyKey)

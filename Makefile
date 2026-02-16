@@ -25,6 +25,8 @@ run: build
 	open $(APP_BUNDLE)
 
 install: build
+	@-pkill -x $(APP_NAME) 2>/dev/null && sleep 0.5 || true
+	tccutil reset Accessibility com.holdfast.app
 	rm -rf $(INSTALL_DIR)/$(APP_NAME).app
 	cp -R $(APP_BUNDLE) $(INSTALL_DIR)/$(APP_NAME).app
 	@echo "Installed to $(INSTALL_DIR)/$(APP_NAME).app"
